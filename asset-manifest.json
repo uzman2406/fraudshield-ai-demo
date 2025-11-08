@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/fraudshield-ai-demo/static/css/main.d45265b9.css",
+    "main.js": "/fraudshield-ai-demo/static/js/main.816c1fdf.js",
+    "index.html": "/fraudshield-ai-demo/index.html",
+    "main.d45265b9.css.map": "/fraudshield-ai-demo/static/css/main.d45265b9.css.map",
+    "main.816c1fdf.js.map": "/fraudshield-ai-demo/static/js/main.816c1fdf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d45265b9.css",
+    "static/js/main.816c1fdf.js"
+  ]
+}
