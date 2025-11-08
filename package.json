@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "react-scripts start",
-    "build": "CI=false react-scripts build",
+    "build": "CI=false npm install && npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
