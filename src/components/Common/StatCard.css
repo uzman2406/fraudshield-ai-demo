@@ -1,0 +1,153 @@
+.stat-card {
+  position: relative;
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e1e5e9;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card.default {
+  border-left: 4px solid #667eea;
+}
+
+.stat-card.danger {
+  border-left: 4px solid #ff4d4f;
+}
+
+.stat-card.success {
+  border-left: 4px solid #52c41a;
+}
+
+.stat-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.stat-card.danger .stat-icon-wrapper {
+  background: linear-gradient(135deg, #ff4d4f 0%, #ff7875 100%);
+}
+
+.stat-card.success .stat-icon-wrapper {
+  background: linear-gradient(135deg, #52c41a 0%, #73d13d 100%);
+}
+
+.stat-content {
+  flex: 1;
+  z-index: 2;
+}
+
+.stat-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1;
+}
+
+.stat-change {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.stat-change.positive {
+  background: #f6ffed;
+  color: #52c41a;
+}
+
+.stat-change.negative {
+  background: #fff2f0;
+  color: #ff4d4f;
+}
+
+.stat-title {
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.stat-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  opacity: 0.03;
+}
+
+.stat-wave {
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent 30%, #667eea 50%, transparent 70%);
+  animation: wave 8s linear infinite;
+}
+
+.stat-card.danger .stat-wave {
+  background: linear-gradient(45deg, transparent 30%, #ff4d4f 50%, transparent 70%);
+}
+
+.stat-card.success .stat-wave {
+  background: linear-gradient(45deg, transparent 30%, #52c41a 50%, transparent 70%);
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .stat-card {
+    height: auto;
+    padding: 20px;
+  }
+  
+  .stat-value {
+    font-size: 1.7rem;
+  }
+  
+  .stat-icon-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+}
